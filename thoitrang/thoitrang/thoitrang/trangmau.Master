@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="trangmau.master.cs" Inherits="thoitrang.trangmau" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style3 {
+            height: 289px;
+        }
+        .auto-style4 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="auto-style1">
+            <tr>
+                <td colspan="3">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/bannerADMIN.jpg" Width="1200px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="3">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" Orientation="Horizontal" StaticSubMenuIndent="10px" style="font-size: large; font-weight: 700" Width="1200px">
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="6px" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="6px" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                    </asp:Menu>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+                </td>
+            </tr>
+            <tr>
+                <td Width="200px" class="auto-style3" style="vertical-align: top">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MaDM" DataSourceID="SqlDataSource1">
+                        <Columns>
+                            <asp:BoundField DataField="MaDM" HeaderText="MaDM" InsertVisible="False" ReadOnly="True" SortExpression="MaDM" Visible="False" />
+                            <asp:BoundField DataField="TenDM" HeaderText="TenDM" SortExpression="TenDM" Visible="False" />
+                            <asp:HyperLinkField DataNavigateUrlFields="MaDM" DataNavigateUrlFormatString="~/DanhMucSanPham.aspx?MaDM={0}" DataTextField="TenDM" HeaderText="DANH MỤC" />
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ql_thoi_trangConnectionString3 %>" SelectCommand="SELECT [MaDM], [TenDM] FROM [Danhmuc]">
+                    </asp:SqlDataSource>
+                </td>
+                <td  Width="800px" class="auto-style3" style="vertical-align: top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td  Width="200px" class="auto-style3">
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/quang cao1.jpg" Width="200px" />
+                    <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/quangcao2.jpg" Width="200px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="auto-style4">CopyRigth@LOIHUYNH&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

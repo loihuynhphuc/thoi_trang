@@ -1,0 +1,5 @@
+E:\monthayvinh\thoitrang\thoitrang\thoitrang\bin\thoitrang.dll
+E:\monthayvinh\thoitrang\thoitrang\thoitrang\bin\thoitrang.pdb
+E:\monthayvinh\thoitrang\thoitrang\thoitrang\obj\Debug\thoitrang.csprojResolveAssemblyReference.cache
+E:\monthayvinh\thoitrang\thoitrang\thoitrang\obj\Debug\thoitrang.dll
+E:\monthayvinh\thoitrang\thoitrang\thoitrang\obj\Debug\thoitrang.pdb
